@@ -1,0 +1,11 @@
+﻿  student.c
+C:\VUT\IZG\izg_lab_01\student.c(71,76): warning C4244: =: double se převádí na float; může dojít ke ztrátě dat.
+C:\VUT\IZG\izg_lab_01\student.c(72,25): warning C4244: =: float se převádí na unsigned char; může dojít ke ztrátě dat.
+C:\VUT\IZG\izg_lab_01\student.c(72,50): warning C4244: =: float se převádí na unsigned char; může dojít ke ztrátě dat.
+C:\VUT\IZG\izg_lab_01\student.c(72,74): warning C4244: =: float se převádí na unsigned char; může dojít ke ztrátě dat.
+  Vytváří se kód.
+  0 of 20 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Vytváření kódu se dokončilo.
+  izg_lab_01.vcxproj -> C:\VUT\IZG\izg_lab_01\Release\izg_lab_01.exe

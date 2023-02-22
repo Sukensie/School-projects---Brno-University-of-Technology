@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/VUT/3BIT-Z/ims/src/ims2022/main.cpp
+../simlib/simlib.h
+/mnt/c/VUT/3BIT-Z/ims/src/simlib/simlib.h
+stdio.h
+-
+time.h
+-
+stdlib.h
+-
+
+/mnt/c/VUT/3BIT-Z/ims/src/simlib/simlib.h
+cstdlib
+-
+list
+-
+string
+-
+

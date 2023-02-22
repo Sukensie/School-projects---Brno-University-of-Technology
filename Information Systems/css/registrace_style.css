@@ -1,0 +1,222 @@
+/**
+ * Author: Adam Cologna, xcolog00
+ */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+header{
+    color: #ccc;
+    background: #272A33;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    max-width: 800px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+span{
+    font-weight: bold;
+}
+.content form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,60px);
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 120px;
+}
+.content form input{
+    padding: 0.75em 0.5em;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background: #FCFBFC;
+    max-width: 350px;
+    
+    width: 100%;
+}
+.name{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+.surname{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+.email{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+.username{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+.date{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/1;
+    grid-row: 3/3;
+}
+.phone{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2/2;
+    grid-row: 3/3;
+}
+.school{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    grid-column: 1/ span 2;
+    grid-row: 4/4;
+}
+.school .sch, .fac, .year{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content form .sch input{
+    min-width: 80px;
+    max-width: 200px;
+}
+.content form .fac input{
+    min-width: 80px;
+    max-width: 200px;
+}
+.content form .year input{
+    min-width: 80px;
+    max-width: 200px;
+}
+.password{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/span 2;
+    grid-row: 5/5;
+}
+.passwordag{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/span 2;
+    grid-row: 6/6;
+}
+.password input{
+    max-width: 500px;
+    min-width: 200px;
+}
+.passwordag input{
+    width: 500px;
+    min-width: 200px;
+}
+.submit{
+    grid-row: 7/7;
+    grid-column: 1/ span 2;
+    text-align: center;
+    margin-top: 40px;
+    padding: 2px 25px;
+}
+#reg-submit{
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #fba405;
+    box-shadow: 0 0 10px 2px #fba405;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+#reg-submit:hover{
+    background-color: #db8e03;
+    box-shadow: 0 0 10px 2px #db8e03;
+}
+input{
+    padding: 10px;
+}
+.content .date input{
+    padding: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+footer{
+    color: #ccc;
+    background: #272A33;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+@media screen and (max-width: 875px) {
+    .content form{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 120px;
+    }
+    .content form input {
+        height: 30px;
+        max-width: 350px;
+        min-width: 150px;
+    }
+    .school{
+        flex-direction: column;
+    }
+    .content .date input{
+        padding: 10px;
+    }
+
+    .content form .sch input{
+        min-width: 80px;
+        max-width: 350px;
+    }
+    .content form .fac input{
+        min-width: 80px;
+        max-width: 350px;
+    }
+    .content form .year input{
+        min-width: 80px;
+        max-width: 350px;
+    }
+}

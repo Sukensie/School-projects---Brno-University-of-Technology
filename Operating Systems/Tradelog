@@ -1,0 +1,233 @@
+#!/bin/bash
+export POSIXLY_CORRECT=yes
+export LC_NUMERIC=en_US.UTF-8
+export LC_ALL=C
+
+
+function printHelp ()
+{
+  echo "–––––––––––––––––––"
+  echo "     TRADELOG      " 
+  echo "–––––––––––––––––––"
+  echo "analyzátor logů z obchodování na burze"
+  echo ""
+  echo "POUŽITÍ"
+  echo "–––––––––––"
+  echo "tradelog [-h|--help] [FILTR] [PŘÍKAZ] [LOG [LOG2 [...]]"
+  echo ""
+
+  echo "PŘÍKAZY"
+  echo "----------"
+  echo "list-tick"
+  echo "   výpis seznamu vyskytujících se burzovních symbolů, tzv. “tickerů”."
+  echo ""
+
+  echo "profit"
+  echo "   výpis celkového zisku z uzavřených pozic."
+  echo ""
+
+
+  echo "pos"
+  echo "   výpis hodnot aktuálně držených pozic seřazených sestupně dle hodnoty."
+  echo ""
+
+  echo "last-price"
+  echo "   výpis poslední známé ceny pro každý ticker."
+  echo ""
+ 
+  echo "hist-ord"
+  echo "   výpis histogramu počtu transakcí dle tickeru."
+  echo ""
+ 
+  echo "graph-pos"
+  echo "   výpis grafu hodnot držených pozic dle tickeru."
+  echo ""
+  echo ""
+
+  echo "FILTRY"
+  echo "----------"
+  echo "filtr může být jeden, ale i kombinace následujících"
+  echo ""
+
+  echo "-a DATETIME"
+  echo "   jsou uvažovány pouze záznamy PO tomto datu (bez tohoto data). DATETIME je formátu YYYY-MM-DD HH:MM:SS."
+  echo ""
+
+  echo "-b DATETIME"
+  echo "   jsou uvažovány pouze záznamy PŘED tímto datem (bez tohoto data). DATETIME je formátu YYYY-MM-DD HH:MM:SS."
+  echo ""
+
+  echo "-t TICKER"
+  echo "   jsou uvažovány pouze záznamy odpovídající danému tickeru. Při více výskytech přepínače se bere množina všech uvedených tickerů."
+  echo ""
+
+  echo "-w WIDTH "
+  echo "   u výpisu grafů nastavuje jejich šířku, tedy délku nejdelšího řádku na WIDTH. Tedy, WIDTH musí být kladné celé číslo. Více výskytů přepínače je chybné spuštění."
+  echo ""
+
+  echo "-h a --help "
+  echo "   vypíšou nápovědu s krátkým popisem každého příkazu a přepínače."
+
+}
+
+args=("$@") #načte všechny argumenty
+argsCount=${#args[@]} #počet argumentů
+tickerArray=()
+tickerFilter=false
+src="cat " #fallback
+noFilter=true
+singleFile=true
+
+printCol=0 #určení jaké sloupce se budou zobrazovat na výstup. Implicitně vytiskne všechny ($0)
+
+ 
+#loop který prochází argumenty
+j=0
+for (( i=0;i<$argsCount;i++)); do 
+
+  if [ "${args[${i}]}" == "--help" ] || [ "${args[${i}]}" == "-h" ]; then
+    printHelp
+    exit 1
+  fi
+
+  if [ "${args[${i}]}" == "-a" ]; then
+    tickerFilter=true
+    after="${args[${i}+1]}"
+    filtrDate+=" && \$1 > \""$after"\""
+  fi
+
+  if [ "${args[${i}]}" == "-b" ]; then
+    tickerFilter=true
+    before="${args[${i}+1]}"
+    filtrDate+=" && \$1 < \""$before"\""
+  fi
+
+  if [ "${args[${i}]}" == "-t" ]; then
+    tickerArray[$j]=${args[${i}+1]}
+    j=$((j+1))
+    i=$((i+1)) #když narazíš na -t, tak nahraj ticker do poleTickerů a skoč tentokrát ob jeden prvek
+    tickerFilter=true
+  fi
+
+  if [ "${args[${i}]}" == "-w" ]; then
+    width=${args[${i}+1]}
+  fi
+
+  #pomocí regulárního výrazu hledá cokoliv, co má příponu .log
+  if [[ ${args[${i}]}  =~ ^.+\.(log)$ ]]; then
+    if [ "$singleFile" == "true" ]; then
+      src="cat "${args[${i}]} 
+      singleFile=false
+    else
+      src+=" "${args[${i}]}
+    fi  
+  fi  
+
+  #pomocí regulárního výrazu hledá cokoliv, co má příponu .log.gz
+  if [[ ${args[${i}]}  =~ ^.+\.(log.gz)$ ]]; then
+    src="gzip -d -c "${args[${i}]}
+    singleFile=false
+  fi    
+
+  if [ "${args[${i}]}" == "list-tick" ]; then
+    tickerFilter=true
+    printCol=2 #program vytiskne pouze sloupec, ve kterém jsou tickery
+    listTick=true
+  fi
+
+  if [ "${args[${i}]}" == "profit" ]; then
+    noFilter=false
+    tickerFilter=true
+    profitFilter=true
+  fi
+
+  if [ "${args[${i}]}" == "pos" ]; then
+    noFilter=false
+    tickerFilter=true
+    posFilter=true
+  fi
+
+  if [ "${args[${i}]}" == "last-price" ]; then
+    noFilter=false
+    tickerFilter=true
+    lastPriceFilter=true
+  fi
+
+  if [ "${args[${i}]}" == "hist-ord" ]; then
+    noFilter=false
+    tickerFilter=true
+    histOrdFilter=true
+  fi
+
+  if [ "${args[${i}]}" == "graph-pos" ]; then
+    noFilter=false
+    tickerFilter=true
+    graphPosFilter=true
+  fi
+
+done
+
+
+#pokud se nezadá žádný filtr, vloží se do eval "cat input.log"... to zapříčiní, že eval neudělá nic navíc (jakoby neexistoval)
+  if [ "$noFilter" == "true" ]; then
+    prikaz=$src
+  fi
+  
+#pokud se nezadá žádný ticker, tak se filtr tickerů poté se vyhodnocovací IF vyhodnotí jako true 
+filtrIF="1>0" 
+if [ ${#tickerArray[@]} -gt 0 ]; then
+    filtrIF="" 
+  fi
+
+if [ "$tickerFilter" == "true" ]; then
+    
+    #skládání ticker filtru do promenne prikaz
+    prikaz="awk" #neměnný začátek
+
+    #nahrání proměnných z tickerArray do -v (lokální proměnné fce AWK)
+    for (( i=0;i<${#tickerArray[@]};i++)); do
+      prikaz+=" -v ticker$i=\${tickerArray[$i]}"
+    done
+
+    prikaz+=" -F ';' '{if( " #neměnné uložení delimu a začátek IFu
+
+    #nahrání podmínek do IFu
+    for (( i=0;i<${#tickerArray[@]};i++)); do
+      if [ $i != 0 ]; then
+        prikaz+=" || "
+      fi
+      prikaz+="\$2 == ticker$i "
+    
+    done
+
+    prikaz+="$filtrIF $filtrDate ) print \$$printCol;}'" #neměnné ukončení příkazu
+fi
+
+#jednotlivé příkazy se do finálního příkazu nahrávají až po profiltrovaní
+if [ "$profitFilter" == "true" ]; then
+    prikaz+=" | awk -F ';' '{if( \$3 == \"sell\" ) {sellSum+=(\$4*\$6) } else {buySum+=(\$4*\$6) } }  END{ celkem=(sellSum-buySum) ; printf (\"%.2f\n\", celkem) }'"
+  fi
+
+if [ "$posFilter" == "true" ]; then
+  prikaz+=" | awk -F ';' ' { if(\$3==\"buy\") { a[\$2]+=\$6 } else { a[\$2]-=\$6 } lastPrice[\$2]=\$4 } END { maxLength=0; for(i in a) { currValue=a[i]*lastPrice[i]; currString=sprintf(\"%.2f\", currValue); if(maxLength<length(currString) ) { maxLength=length(currString); } } maxLength=maxLength+1; for(i in a) { printf(\"%-10s:%*.2f\n\",i,maxLength,(a[i]*lastPrice[i]) ) } }' | sort -t ':' -k 2 -g -r"
+fi
+
+if [ "$lastPriceFilter" == "true" ]; then
+  prikaz+=" | awk -F ';' '{a[\$2]=\$4}END{maxLength=0; for(i in a) {if(maxLength<length(a[i]) ) {maxLength=length(a[i]);  } } for(i in a) printf(\"%-10s: %*.2f\n\",i,maxLength,a[i] )}' | sort -t ':' -k 1"
+fi
+
+if [ "$histOrdFilter" == "true" ]; then
+  prikaz+=" | awk -F ';' '{a[\$2]=a[\$2]\"#\";}END{for(i in a) {if (a[i]==\"\") {printf(\"PICOVINKA\n\");} printf(\"%-10s: %s\n\",i,a[i]);} }' | sort  -k 1 "
+fi
+
+if [ "$graphPosFilter" == "true" ]; then
+  prikaz+=" | awk -F ';' -v width="$width" 'function abs(x){return ((x < 0.0) ? -x : x)} { if(\$3==\"buy\") {a[\$2]+=\$6} else {a[\$2]-=\$6} lastPrice[\$2]=\$4 } END { if(width!=\"\") {for(i in a) { if(max==\"\") { max=abs(a[i]*lastPrice[i]); } if(abs(a[i]*lastPrice[i])>max) { max=abs(a[i]*lastPrice[i]); } } max=max/width;} else {max=1000;} for(i in a) { pocet=int((a[i]*lastPrice[i]) / max); a[i]=\"\"; for(j = 0; j < pocet; j++) {a[i]=a[i]\"#\"} for(j=0;j>pocet;j--) {a[i]=a[i]\"!\"} if(a[i]==\"\") {printf(\"%-10s:%s\n\",i,a[i] )} else {printf(\"%-10s: %s\n\",i,a[i] )} } }' | sort -t ':' -k 1 "
+
+fi
+
+if [ "$listTick" == "true" ]; then
+  prikaz+=" | sort | uniq" # musí se seřadit a pak se zavolá uniq, který vytiskne jen unikátní prvky
+fi
+
+#finální volání příkazů
+eval "$src" | eval "$prikaz" 

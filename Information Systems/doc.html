@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" 
+      content="text/html; charset=utf-8">
+    
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<h1>Studentské turnaje (tým: Putovní Cibule)</h1>
+
+<dl>
+	<dt>Autoři</dt>
+	<dd>Adam Cologna
+	    <a href="mailto:xcolog00@stud.fit.vutbr.cz">xcolog00@stud.fit.vutbr.cz</a> -
+		neregistrovaný uživatel, registrace (backend), přihlášení (backend)
+	</dd>
+	<dd>Tomáš Souček 
+	    <a href="mailto:xsouce15@stud.fit.vutbr.cz">xsouce15@stud.fit.vutbr.cz</a> - 
+		týmy, pavouk, losování zápasů, celkový návrh designu informačního systému
+	</dd>
+  <dd>David Kocman 
+	    <a href="mailto:xkocma08@stud.fit.vutbr.cz">xkocma08@stud.fit.vutbr.cz</a> - 
+		turnaje, admin, registrace (frontend), přihlášení (frontend)
+	</dd>
+	<dt>URL aplikace</dt>
+	<dd><a href="http://pucis.unas.cz/index.php">http://pucis.unas.cz/index.php</a></dd>
+</dl>
+
+<h2>Uživatelé systému pro testování</h2>
+<table>
+<tbody><tr><th>Login</th><th>Heslo</th><th>Role</th></tr>
+<tr><td>admin</td><td>random</td><td>Admin</td></tr>
+<tr><td>Venca123</td><td>random</td><td>Přihlášený na turnaj</td></tr>
+<tr><td>jannov</td><td>random</td><td>Správce turnaje</td></tr>
+</tbody></table>
+
+<h3>Video</h3>
+<p><a href="https://drive.google.com/file/d/1u7meF3eq6SOjoPHVAkWlad97gXNab8Bx/view?usp=sharing">Odkaz na komentované video</a></p> 
+
+<h2>Implementace</h2>
+<ul>
+	<li>index.php je samozřejmě hlavní stránka a slouží hlavně pro přesměrování na ostatní.</li>
+	<li>db_operations.php je rozhraní pro operace s databází MySQ.L</li>
+	<li>Soubory admin obsahují implementaci admín stránek informačního systému.</li>
+	<li>login.php a registrace.php umožňují přihlášení a registraci uživatelů.</li>
+	<li>Turnaj soubory obsahují implementaci správy, vytváření, editaci, schválení, vytváření a mazání turnajů. Také zadávání jednotlivých výsledků utkání a vytváření pavouka. Přihlašování týmů a jednotlivců na turnaj.</li>
+	<li>Soubory pro týmy umožňují vytváření, editaci a mazání týmů, pozívání hráčů do týmu.</li>
+	<li>users.php obsahuje výpis všech uživatelů pro nepřihlášeného uživatele.</li>
+	<li>utils.php obsahují pomocné funkce které jsou sdílené ve více souborech.</li>
+	Ve složce model se nachází php soubory, které slouží jako backend pro dříve zmíněné soubory.
+	Obsah souborů kaskádových stylů ve složce css určují vzhled stránek.
+</ul>
+
+<h3>Databáze</h3>
+
+<img src="img/er_diagram_iis.png" alt="ER Diagram systému" width="800px"/>
+
+<h2>Instalace</h2>
+<ul>
+<li>Co se týče instalace na server, tak doporučujeme otevřit přímo adresu, na kterou bylo vše nahráno.</li>
+<li>Jinak doporučený postup je odzipovat odevzdaný soubor a umístit jej do složky, kde je nakonfigurovaný PHP server. </li>
+<li>Žádný framework nebyl využit, takže stačí PHP verze 8.1 a vyšší.</li>
+<li>Pro nastavení databáze je potřeba importovat iis.sql soubor do správce vaší databáze. V souboru db_operations.php je případně potřeba změnit proměnné $servername, $username a $password.</li>
+</ul>
+
+<h2>Známé problémy</h2>
+<p>Databáze není zabezpečena proti SQL útokům.</p>
+
+
+
+</body></html>

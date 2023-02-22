@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/VUT/3BIT-Z/ims/src/simlib/generr.c
+stdio.h
+-
+stdlib.h
+-
+ctype.h
+-
+string.h
+-
+

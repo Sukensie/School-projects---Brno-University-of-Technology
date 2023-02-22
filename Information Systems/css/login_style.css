@@ -1,0 +1,83 @@
+/**
+ * Author: David Kocman, xkocma08
+ */
+* { box-sizing: border-box }
+.wrapper{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-family: Arial;
+}
+.dropdown_menu{
+    margin: 0;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+}
+#login-username{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 80%;
+}
+#login-password{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 80%;
+}
+#login-submit{
+    margin: 15px;
+    background-color: #f3a771;
+    box-shadow: 0 0 10px 2px #f3a771;
+    transition: 0.5s;
+    border: 0px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+}
+form{
+    margin-top: 35px;
+}
+input, select{
+    box-sizing: border-box;
+}
+#login-submit:hover{
+    background-color: #ec6e14;
+    box-shadow: 0 0 10px 2px #ec6e14;
+}
+#nazev{
+    font-size: 40px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+.logo_wrapper{
+    display: flex;
+    gap: 20px;
+    margin-top: 80px;
+}
+#logo{
+    max-width: 50px;
+}
+#registr{
+    font-size: 12px;
+    color: gray;
+}
+a{
+  color: gray;  
+}

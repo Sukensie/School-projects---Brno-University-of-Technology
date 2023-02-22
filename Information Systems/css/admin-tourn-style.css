@@ -1,0 +1,169 @@
+/**
+ * Author: David Kocman, xkocma08
+ */
+header{
+    margin: 0;
+    background: #272A33;
+}
+.topnav{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 5px;
+}
+.topnav a{
+    color: white;
+}
+.topnav a:link{
+    color: white;
+    text-decoration: none;
+}
+.topnav a:active{
+    color: white;
+    text-decoration: none;
+}
+.topnav a:hover{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.topnav a:visited{
+    color: white;
+    text-decoration: none;
+}
+footer{
+    color: #ccc;
+    background: #272A33;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.popup{
+    background-color: white;
+    min-width: 400px;
+    min-height: 100%;
+    border-left: 1px black solid;
+    padding-left: 20px;
+}
+#detail{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{
+    height: 1000px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+.page{
+    max-width: 1120px;
+    min-height: 700px;
+    min-width: 400px;
+    margin: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 720px 400px;
+    grid-template-rows: 400px 400px;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+#acc{
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+#not-acc{
+    grid-row: 2/2;
+    grid-column: 1/1;
+}
+.wrapper{
+    grid-column: 2/2;
+    grid-row: 1/span 2;
+}
+
+
+.acc, .not-acc{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+ol{
+    cursor: pointer;
+}   
+
+li{
+    list-style: none;
+    max-width: 600;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 150px 100px 200px 100px 100px;
+    column-gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+li:nth-child(2n){
+    background-color: #fff9ef;
+}
+li .name{
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+li .sport{
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+li .date{
+    grid-column: 3/3;
+    grid-row: 1/1;
+}
+li .type{
+    grid-column: 4/4;
+    grid-row: 1/1;
+}
+li .delete{
+    max-width: 20px;
+    border: none;
+    background-color: transparent;
+    grid-column: 5/5;
+    grid-row: 1/1;
+    cursor: pointer;
+}
+li .accept{
+    max-width: 20px;
+    border: none;
+    background-color: transparent;
+    grid-column: 5/5;
+    grid-row: 1/1;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}
+h2{
+    margin: 0;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.numbers span{
+    font-size: 13px;
+}
+li:hover{
+    background-color: #feedce;
+    transition: 0.2s linear;
+}

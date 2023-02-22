@@ -1,0 +1,165 @@
+/**
+ * Author: David Kocman, xkocma08
+ */
+header{
+    margin: 0;
+    background: #272A33;
+}
+footer{
+    color: #ccc;
+    background: #272A33;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li{
+    list-style: none;
+    max-width: 900;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 160px 160px 160px 200px 50px 50px;
+    column-gap: 30px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+li:nth-child(2n){
+    background-color: #fff9ef;
+}
+li:last-child{
+    border: 0px;
+}
+
+h1{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.content{
+    margin: auto;
+    max-width: 1000px;
+    max-height: 390px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.topnav{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 5px;
+}
+.topnav a{
+    color: white;
+}
+.topnav a:link{
+    color: white;
+    text-decoration: none;
+}
+.topnav a:active{
+    color: white;
+    text-decoration: none;
+}
+.topnav a:hover{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.topnav a:visited{
+    color: white;
+    text-decoration: none;
+}
+button{
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 20px;
+}
+.delete:hover{
+    background-color: #ffb938;
+    transition: 0.5s linear;
+}
+.delete:not(:hover){ 
+    background-color: transparent;
+    transition: 0.5s linear;
+} 
+.form-container {
+    min-width: 100px;
+    width:350px;
+    padding: 10px;
+    background-color: white;
+    height: 200px;
+    border-radius: 20px;
+    display: none;
+    border: 1px solid black;
+    z-index: 9;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container h2{
+    margin:0;
+    font-size:20px;
+
+}
+
+.head{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.forma form div{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.forma form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#passw{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+form #submit
+{
+    width: 40%;
+    margin: auto;
+    background: #fba405;
+    color: #333;
+    font-weight: 700;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+form #submit:hover
+{
+    background: #db8e03;
+}

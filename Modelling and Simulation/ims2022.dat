@@ -1,0 +1,58 @@
++----------------------------------------------------------+
+| FACILITY Zablokování kanálu                           |
++----------------------------------------------------------+
+|  Status = BUSY                                           |
+|  Time interval = 0 - 18000                               |
+|  Number of requests = 1                                  |
+|  Average utilization = 1                                 |
++----------------------------------------------------------+
+
++----------------------------------------------------------+
+| FACILITY Vjezd do kanálu                                |
++----------------------------------------------------------+
+|  Status = not BUSY                                       |
+|  Time interval = 0 - 18000                               |
+|  Number of requests = 111                                |
+|  Average utilization = 0.650889                          |
++----------------------------------------------------------+
+  Input queue 'Vjezd do kanálu.Q1'
++----------------------------------------------------------+
+| QUEUE Q1                                                 |
++----------------------------------------------------------+
+|  Time interval = 0 - 18000                               |
+|  Incoming  110                                           |
+|  Outcoming  110                                          |
+|  Current length = 0                                      |
+|  Maximal length = 110                                    |
+|  Average length = 33.5453                                |
+|  Minimal time = 4870.87                                  |
+|  Maximal time = 6244                                     |
+|  Average time = 5489.23                                  |
+|  Standard deviation = 315.832                            |
++----------------------------------------------------------+
+
++----------------------------------------------------------+
+| STORE Denní kapacita kanálu                            |
++----------------------------------------------------------+
+|  Capacity = 24  (0 used, 24 free)                        |
+|  Time interval = 0 - 18000                               |
+|  Number of Enter operations = 123                        |
+|  Minimal used capacity = 0                               |
+|  Maximal used capacity = 24                              |
+|  Average used capacity = 6.49934                         |
++----------------------------------------------------------+
+  Input queue 'Denní kapacita kanálu.Q'
++----------------------------------------------------------+
+| QUEUE Q                                                  |
++----------------------------------------------------------+
+|  Time interval = 0 - 18000                               |
+|  Incoming  4                                             |
+|  Outcoming  4                                            |
+|  Current length = 0                                      |
+|  Maximal length = 1                                      |
+|  Average length = 0.169563                               |
+|  Minimal time = 748.131                                  |
+|  Maximal time = 768                                      |
+|  Average time = 763.033                                  |
++----------------------------------------------------------+
+

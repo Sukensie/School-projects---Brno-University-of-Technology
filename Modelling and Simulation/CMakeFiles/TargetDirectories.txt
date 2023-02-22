@@ -1,0 +1,5 @@
+/mnt/c/VUT/3BIT-Z/ims/CMakeFiles/rebuild_cache.dir
+/mnt/c/VUT/3BIT-Z/ims/CMakeFiles/edit_cache.dir
+/mnt/c/VUT/3BIT-Z/ims/CMakeFiles/run.dir
+/mnt/c/VUT/3BIT-Z/ims/CMakeFiles/ims2022.dir
+/mnt/c/VUT/3BIT-Z/ims/CMakeFiles/simlib.dir

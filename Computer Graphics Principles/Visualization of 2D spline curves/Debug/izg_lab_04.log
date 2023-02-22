@@ -1,0 +1,16 @@
+﻿  color.cpp
+  main.cpp
+C:\VUT\1BIT-L\IZG\izg_lab_05\main.cpp(170,21): warning C4244: argument: double se převádí na int; může dojít ke ztrátě dat.
+C:\VUT\1BIT-L\IZG\izg_lab_05\main.cpp(170,14): warning C4244: argument: double se převádí na int; může dojít ke ztrátě dat.
+C:\VUT\1BIT-L\IZG\izg_lab_05\main.cpp(294,30): warning C4244: =: double se převádí na Sint16; může dojít ke ztrátě dat.
+C:\VUT\1BIT-L\IZG\izg_lab_05\main.cpp(295,30): warning C4244: =: double se převádí na Sint16; může dojít ke ztrátě dat.
+C:\VUT\1BIT-L\IZG\izg_lab_05\main.cpp(297,32): warning C4244: =: double se převádí na Sint16; může dojít ke ztrátě dat.
+C:\VUT\1BIT-L\IZG\izg_lab_05\main.cpp(298,32): warning C4244: =: double se převádí na Sint16; může dojít ke ztrátě dat.
+  student.cpp
+C:\VUT\1BIT-L\IZG\izg_lab_05\student.cpp(78,21): warning C4838: Převod z: int na: double vyžaduje zužující převod.
+C:\VUT\1BIT-L\IZG\izg_lab_05\student.cpp(78,31): warning C4838: Převod z: int na: double vyžaduje zužující převod.
+C:\VUT\1BIT-L\IZG\izg_lab_05\student.cpp(122,21): warning C4838: Převod z: int na: double vyžaduje zužující převod.
+C:\VUT\1BIT-L\IZG\izg_lab_05\student.cpp(122,31): warning C4838: Převod z: int na: double vyžaduje zužující převod.
+  vector.cpp
+  Generování kódu...
+  izg_lab_04.vcxproj -> C:\VUT\1BIT-L\IZG\izg_lab_05\Debug\izg_lab_04.exe

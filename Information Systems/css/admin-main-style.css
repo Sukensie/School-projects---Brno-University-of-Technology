@@ -1,0 +1,102 @@
+/**
+ * Author: David Kocman, xkocma08
+ */
+header{
+    margin: 0;
+    background: #272A33;
+}
+.topnav{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 5px;
+}
+.topnav a{
+    color: white;
+}
+.topnav a:link{
+    color: white;
+    text-decoration: none;
+}
+.topnav a:active{
+    color: white;
+    text-decoration: none;
+}
+.topnav a:hover{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.topnav a:visited{
+    color: white;
+    text-decoration: none;
+}
+footer{
+    color: #ccc;
+    background: #272A33;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wrapper{
+    margin: 0;
+    max-width: 1000px;
+    margin: auto;
+}
+#stats{
+    display: grid;
+    grid-template-columns: 310px 310px;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    
+}
+#stats p{
+    font-size: 25px;
+    margin: 0;
+}
+
+#stats div{
+    background-color: #fff9ef;
+    border: black 1px solid;
+    box-shadow: 0 0 10px 2px #fff9ef;
+    border-radius: 10px;
+    width: 310px;
+    height: 130px;
+}
+
+.upc{
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+.pass{
+    grid-row: 1/1;
+    grid-column: 2/2;
+}
+.usr{
+    grid-row: 2/2;
+    grid-column: 1/1;
+}
+.teams{
+    grid-row: 2/2;
+    grid-column: 2/2;
+}

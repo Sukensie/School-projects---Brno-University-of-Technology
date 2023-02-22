@@ -1,0 +1,56 @@
+TÝM: Kerbal IVS Program
+
+Přidělení úkolů
+ - Leader: xjanda28
+    xcolog00: příručky, licence, instalace
+    xjanda28: makefile, profiling, prezentace
+    xkocma08: doxygen, instalace
+    xsouce15: GUI, icon, mockup, JS
+
+
+Stanovené termíny
+ - Pravidelné meetingy: PO 18:00 
+ 16. 3. 
+    - github
+    - možnost zpracování v PHP
+    - seznámit se se svými požadavky
+ 22. 3.
+    - inicializace githubu
+    - sepsání testů
+    - dokončení plánu
+    - naplánování vlastností kalkulačky
+ 29. 3.
+    - pracování na dokumentaci
+    - návrh GUI
+    - mockup
+ 5. 4.
+    - matematické funkce
+    - instalátor
+    - makefile
+ 12. 4.
+    - implementace
+    - přidání historie
+ 19. 4.
+    - dokončení dokumentace
+    - code review
+ 26. 4.
+    - finální ladění a testování
+ 5. 5.
+    - zkušební instalace a prezentace
+
+
+Komunikační kanály
+ - Discord  - formální
+            - samostané kanály na řešení problémů pro lepší orientaci
+            - týmová setkání
+ - Messenger - neformální, rychlá komunikace
+ - Trello - TODO list
+          - Issues
+
+
+Systém pro správu verzí
+ - GitHub (4 studenti + 1 účet pro hodnotitele)
+
+
+Vývoj
+ - VScode (+ .editorconfig)

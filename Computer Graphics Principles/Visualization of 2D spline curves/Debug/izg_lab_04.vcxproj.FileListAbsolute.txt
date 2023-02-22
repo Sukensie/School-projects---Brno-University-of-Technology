@@ -1,0 +1,4 @@
+C:\Users\plusl\Downloads\izg_lab_04\Debug\izg_lab_04.exe
+C:\Users\plusl\Downloads\izg_lab_04\Debug\izg_lab_04.pdb
+C:\VUT\1BIT-L\IZG\izg_lab_05\Debug\izg_lab_04.exe
+C:\VUT\1BIT-L\IZG\izg_lab_05\Debug\izg_lab_04.pdb

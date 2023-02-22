@@ -1,0 +1,642 @@
+/*
+A basic calculator created as a project for school by Kerbal Team. IVS L2021.
+    Copyright (C) 2021 Kerbal Team
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+    In case of malfunctions, do not hesitate to contact any of us.
+    xjanda28@stud.fit.vutbr.cz, xkocma08@stud.fit.vutbr.cz, 
+    xsouce15@stud.fit.vutbr.cz, xcolog00@stud.fit.vutbr.cz
+
+
+*/
+	body
+	{
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bolder;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: #707070;
+	}
+	body * 
+	{
+		color: inherit;
+	}
+	body.dark
+	{
+		background-color: #1F1B24;
+		color: #FCB92E;
+	}
+	.full-container
+	{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+	h1
+	{
+		background: #2A8EC4;
+		color: #fff;
+		font-size: 2.5em;
+		padding: 1.5em 0 1em 0;
+		margin: 0;
+		border-bottom-left-radius: 50% 20%;
+ 		border-bottom-right-radius: 50% 20%;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	h2
+	{
+		font-size: 2em;
+	}
+	h2.dark
+	{
+		color:#FCB92E;
+	}
+	.help-btn
+	{
+		background: #2A8EC4;
+		color: white;
+		text-decoration: none;
+		padding: 0.4em 2em;
+		border-radius: 35px;
+		font-size: 1.5em;
+		box-sizing: border-box;
+		transition: all .2s;
+		border: 5px solid transparent;
+		display: inline-block;
+	}
+	.help-btn:hover
+	{
+		background: white;
+		color: #2A8EC4;
+		border: 5px solid #2A8EC4;	
+	}
+	.history
+	{
+		margin: 0.3em 0;
+		font-size: 1.3em;
+		width: 100%;
+		word-break: break-all;
+	}
+	body.dark .history
+	{
+	  color: #ddd;
+	}
+	body.dark .about
+	{
+	  background: #FCB92E;
+	  color: #000;
+	}
+	body.dark h1
+	{
+	  background: #FCB92E;
+	  color: #000;
+	}
+	body.dark *::selection
+	{
+	  background: #FCB92E;
+	  color: #000;
+	}
+	body.dark .about *::selection
+	{
+	  color: #FCB92E;
+	  background: #000;
+	}
+	body.dark .help-btn
+	{
+	  background: #FCB92E;
+	  color: #000;
+	}
+	body.dark .help-btn:hover
+	{
+	  border-color: #FCB92E;
+	  background: #1F1B24;
+	  color: #FCB92E;
+	}
+	
+	* {
+      box-sizing: border-box;
+    }
+      
+    .dosadit:hover
+    {
+    	cursor: pointer;
+    	border-bottom: 2px dotted black;
+    }
+
+	.calculator
+	{
+		color: #000;
+		position: relative;
+		margin: auto;
+		margin-bottom: 1em;
+		width: 80vw;
+		height: auto;
+		background: #ccc;
+		font-size: 18px;
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+		-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+
+		border-radius: 15px 15px 15px 15px;
+		-moz-border-radius: 15px 15px 15px 15px;
+		-webkit-border-radius: 15px 15px 15px 15px;
+		overflow: hidden;
+
+		min-width: 250px;
+	}
+	.btn-container
+	{
+		padding: 0.3em;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: repeat(6, 1fr);
+		grid-gap: 0.1em;
+		background: #F7F7F7;
+		min-height: 60vh;
+	}
+	.btn
+	{
+		font-size: 1em;
+		color: #707070;
+		font-weight: bold;
+		padding: 0.35em;
+		
+		background: #fff;
+		border: none;
+
+		-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);
+		box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);
+
+		border-radius: 30px 30px 30px 30px;
+		-moz-border-radius: 30px 30px 30px 30px;
+		-webkit-border-radius: 30px 30px 30px 30px;
+		overflow: hidden;
+
+		cursor: pointer;
+	}
+	.btn *
+	{
+		cursor: pointer;
+	}
+	.btn-function
+	{
+		background: #EC8E76;
+		color: white;
+	}
+	.btn-util
+	{
+		background: #ECCD76;
+		color: #707070;
+	}
+	.btn-equal
+	{
+		grid-column: 3 / span 2 !important;
+		grid-row: 6;
+		background: #2A8EC4;
+		color: #fff;
+	}
+	.btn:hover
+	{
+		filter: brightness(0.9);
+	}
+	.btn.grow-2
+	{
+		grid-column: span 2;
+	}
+	.input-container, .equation
+	{
+		padding: 0.3em 0.7em;
+		padding-bottom: 0.7em;
+		min-height: 70px; 
+		width: auto;
+		background: #fff;
+		text-align: right;
+		word-break: break-word;
+		font-weight: bolder;
+
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.insert
+	{
+		display: inline-block;
+		min-width: 1em;
+		
+		text-align: center;
+		min-height: 1em;
+		border: 2px dashed #ccc;
+	
+	}
+	.equation .sup.insert
+	{
+		position: relative;
+		top: -10px;
+	}
+	.input-container .sup.insert
+	{
+		position: relative;
+		top: -20px;
+	}
+	.btn .sup.insert
+	{
+		position: relative;
+		top: -0.5em;
+	}
+	.input-container .insert
+	{
+		background: #F7F7F7;
+	}
+	textarea.insert
+	{
+		vertical-align: middle;
+	}
+	.input-container textarea
+	{
+		position: relative;
+		top: -3px;
+	}
+	.none
+	{
+		display: none;
+	}
+    .equation
+    {
+        color: #A3A3A3 !important;
+        font-size: 0.7em;
+		padding: 1.5em 1em 0 1em;
+    }
+	.equation *
+	{
+		color: inherit;
+        font-size: inherit;
+	}
+  
+	.color
+	{
+		background:none !important;
+		border: none;
+		min-width: initial;
+	}
+	*::selection
+	{
+		background: #2A8EC4;
+		color: white;
+	}
+	*
+	{
+		outline: none;
+	}
+	#copy
+	{
+		background:#F7F7F7;
+		border-radius: 50px;;
+		position: absolute;
+		width: 70px;
+		height: auto;
+		top: 10px;
+		left: 10px;
+		cursor: pointer;
+		padding:10px;
+		text-align: center;
+		font-size: 0.6em;
+		opacity: 0;
+	}
+	#copy:hover
+	{
+		background: #EC8E76;
+		color: white;
+	}
+	#copied
+	{
+		box-sizing: border-box;
+		background: black;
+		color: white;
+		padding: 0.4em;
+		border-radius: 20px;
+		position: absolute;
+		top: 50px;
+		left: 10px;
+		font-size: 14px;
+		width: 70px;
+		opacity: 0;
+		transition: all 0.2s;
+
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+ 	}
+	#square
+	{
+		content: '';
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		background: black;
+		position: absolute;
+		top: -5px;
+		transform: rotate(45deg);
+	}
+	.content
+	{
+		margin:2em auto;
+		max-width: 80%;
+	}
+	.about
+	{
+		background: #2A8EC4;
+		color: #fff;
+		padding: 1em 0;
+	}
+	.about *
+	{
+		color: inherit;
+	}
+	
+	.about p 
+	{
+		margin: 0;
+	}
+	.about *::selection
+	{
+		background: #fff;
+		color: #2A8EC4;
+	}
+	.about div
+	{
+		text-align: center;
+		font-weight: 100;
+		margin-bottom: 1.5em;
+	}
+	.about p
+	{
+		margin: 0;
+	}
+	.about div .name
+	{
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.about div img
+	{
+		box-shadow: 0 0 5px #3f3e3e7d;
+		border-radius: 50%;
+		width: 100px;
+	}
+	@media (min-width:768px)
+	{
+		.about
+		{
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			width: 100%;	
+		}
+		.about h2
+		{
+			grid-column: 1 / -1;
+			text-align: center;
+		}
+	
+		.content
+		{
+			max-width: initial;
+		}
+		.btn
+		{
+			font-size: 30px;
+		}
+		.btn-container
+		{
+			grid-gap: 0.3em;
+		}	
+	}
+	
+	@media (min-width:1200px)
+	{
+		.help-btn
+		{
+			position: absolute;
+			top: 20px;
+			right: 210px;
+		}
+		body
+		{
+			padding: 0;
+			background-color:white;
+			background-image: url('img/bg.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: initial;
+		}
+		body.dark
+		{
+			background-image: url('img/bg-dark.svg');
+		}
+		h1
+		{
+			padding-top: 0;
+			margin-top: 1em;
+			color: #2A8EC4;
+			background: none !important;
+			text-align: left;
+		}
+		body.dark h1
+		{
+			color: #FCB92E;
+		}
+		h1, .content
+		{
+			margin-left: 7%;
+		}
+		.about
+		{
+			width: 55%;
+			padding: 0.5em 2em 0.5em 0;
+			position: absolute;
+			bottom: 0;
+		}
+		.about div, h2
+		{
+			margin: 0;
+		}
+		.about h2
+		{
+			padding: 0.5em;
+		}
+		.calculator
+		{
+			width: 30vw;
+			min-width: 425px;
+			position: fixed;
+			position: absolute;
+			right: 10vw;
+			top: 15vh;
+			font-size: 30px;
+		}
+		body.dark .about
+		{
+			border-bottom-right-radius: 50% 50%;
+			border-top-right-radius: 50% 50%;
+			padding-left: 0;
+			padding-right: 10em;
+			padding-bottom: 2em;
+		}
+		.history
+		{
+			width: 30%
+		}
+		.content
+		{
+			max-height: 50vh;
+			overflow: hidden;
+		}
+	}
+	textarea
+	{
+		box-sizing: border-box;
+		background: none;
+		resize: none;
+		font-family: 'Segoe UI';
+		font-size: 32px;
+		font-weight: bolder;
+		width: 1em;
+		padding: 0;
+		height: 45px;
+		overflow: hidden;
+	}
+	.btn textarea
+	{
+		font-size: 1em;
+		height: 1em;
+		width:1em;
+	}
+
+
+	.switch 
+	{
+		position: absolute;
+		display: inline-block;
+		width: 60px;
+		height: 34px;
+		top: 5vh;
+		right: 5vw;
+	}
+	
+	.switch input 
+	{ 
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	
+	.slider 
+	{
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #54a8f3;
+		background-size: contain;
+		-webkit-transition: .4s;
+		transition: .4s;
+		box-shadow: 0 0 10px #898989;
+	}
+	
+	.slider:before 
+	{
+		position: absolute;
+		content: "";
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background: rgb(255,255,255);
+		background: radial-gradient(circle,  rgba(255,230,0,1) 0%, rgba(255,185,0,1) 100%);
+		-webkit-transition: .4s;
+		transition: .4s;
+			
+		-webkit-box-shadow: 0px 0px 2px 0px rgba(248,250,232,0.7);
+		-moz-box-shadow: 0px 0px 2px 0px rgba(248,250,232,0.7);
+		box-shadow: 0px 0px 2px 0px rgba(248,250,232,0.7);
+	}
+	  
+	input:checked + .slider 
+	{
+	background-color: #151927;
+	}
+	  
+	
+	  
+	input:checked + .slider:before 
+	{
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
+		background:  url('img/toggle-moon.png');
+		background-size: contain;
+	}
+		 
+
+
+	/* Rounded sliders */
+	.slider.round {
+		border-radius: 34px;
+	}
+	
+	.slider.round:before {
+		border-radius: 50%;
+	}
+
+
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1; 
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #888; 
+		border-radius: 5px;
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555; 
+		cursor: pointer;
+	}
+	.smaller
+	{
+		font-size: 0.8em;
+	}
+
+	.input-container
+	{
+		font-size: 32px;
+		max-height: 150px;
+		overflow: auto;
+		align-items: center;
+		min-height: 100px;
+	}
+	

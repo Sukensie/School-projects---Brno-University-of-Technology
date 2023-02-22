@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/ims2022.dir/src/ims2022/main.cpp.o  -o ims2022  -Wl,-rpath,/mnt/c/VUT/3BIT-Z/ims libsimlib.so 

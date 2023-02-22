@@ -1,0 +1,26 @@
+Skutečnost vs realita
+---------------------
+Pozitivní:
+I.   Čas schůzí se celkem často měnil na základě časových možností týmu. 
+     Pokud někdo potřeboval dodělat nějaký projekt a dal vědět dopředu? Nevadí, můžeme se potkat o den později… 
+     Takto to skvěle fungovalo pro všechny členy týmu. Taky nám asi hodně pomohlo, že v podobnou dobu všichni řešili stejné školní povinnosti.
+
+II.  Výběr komunikačního kanálu Discord jsme všichni shledali velmi užitečným. 
+     Měli jsme vytvořených několik místností podle témat (files, general, links, …) a tak nebyl problém ani zpětně dohledat potřebné informace.
+     Pro rychlou domluvu sloužil Messenger, což se také velmi osvědčilo.
+
+III. V týmové spolupráci nebyl problém, každý plnil své úkoly a navzajem jsme si vycházeli vstříc. 
+     Projekt se díky tomu dělal pohodlně a pokud někdo nevěděl, protože např. neměl takové zkušenosti s PHP, zeptal se ostatních, kteří mu pomohli.
+
+IV.  Finalní ladění a testování bylo naplánováno na 26.4., což přesně sedí s datem finalizace projektu, takže to vyšlo perfektně.
+
+Negativní:
+I.   Co by šlo také přístě udělat lépe, byla práce s Gitem. 
+     Ze začátku jsme chtěli všechny soubory pushovat centralizovaně přes jednoho člena, ale to se později ukázalo celkem nereálné. 
+     Než jsme se do pracovaní s Gitem pořádně dostali, bylo už pozdě dělat vše systematičtěji (vytvářet více větví, kontrolovat commity ostatních, …). 
+     Takže jsme projekt dokončili jen v hlavní větvi, aby ještě nevznikly zbytečné zmatky.
+
+II.  Věc od které jsme se lehce odklonili bylo použivání Trella (sdíleného TODO listu všech členů týmu), 
+     na které se trochu zapomnělo a každý si zapisoval a plnil povinnosti sám.
+
+III. V krátkém období jsme se odklonili od plánu práce na projektu, ale později jsme vše stihli v zadaném termínu, takže nebyl s ničím probém.

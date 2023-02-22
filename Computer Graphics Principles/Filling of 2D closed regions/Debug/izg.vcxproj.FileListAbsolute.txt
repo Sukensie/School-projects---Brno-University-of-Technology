@@ -1,0 +1,2 @@
+C:\VUT\1BIT-L\IZG\izg_lab_03\Debug\izg.exe
+C:\VUT\1BIT-L\IZG\izg_lab_03\Debug\izg.pdb

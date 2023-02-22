@@ -1,0 +1,25 @@
+Program -> Prolog { ( FunctionDeclaration | FunctionDefinition | FunctionCall ) }
+Prolog -> keywordRequire string
+FunctionDeclaration -> keywordGlobal id colon keywordFunction lBracket TypeList rBracket colon TypeList 
+FunctionDefinition -> keywordFunction id lBracket ParameterList rBracket [ colon TypeList ] Block keywordEnd
+FunctionCall -> WriteCall | id lBracket ArgumentList rBracket
+WriteCall -> id lBracket Expression { comma Expression } rBracket  //id = "write"
+TypeList -> [ Type { comma Type } ]
+ParameterList -> [ id colon Type { comma id colon Type } ]
+ArgumentList -> [ Expression { comma Expression } ]
+Type -> keywordInteger | keywordString | keywordNumber
+Block -> { Statement }
+Statement -> VariableDefinition | StatementIf | StatementWhile | AssignmentOrCall | StatementReturn
+VariableDefinition -> keywordLocal id colon Type [ equals Expression ]
+StatementIf -> keywordIf Expression keywordThen Block keywordElse Block keywordEnd
+StatementWhile -> keywordWhile Expression keywordDo Block keywordEnd
+AssignmentOrCall -> WriteCall | id ( lBracket ArgumentList rBracket | { comma id } equals ExpressionList) 
+StatementReturn -> keywordReturn ExpressionListOptional
+ExpressionList -> Expression { comma Expression }
+ExpressionListOptional ->[ Expression { comma Expression } ] 
+//vyrazy budu rozpoznavane precedencnou syntaktickou analyzou
+Expression -> Expression ( greaterEqual | lowerEqual | greater | lower | notEqual | doesEqual ) Expression
+Expression -> Expression ( plus | minus | multiply | intDivide | divide | concatenate ) Expression
+Expression -> hash Expression 
+Expression -> lBracket Expression rBracket
+Expression -> string | integer | number | keywordNil | id [lBracket ArgumentList rBracket]

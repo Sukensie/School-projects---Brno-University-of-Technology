@@ -1,0 +1,4 @@
+xcolog00 100 příručky, licence, instalace
+xjanda28 100 makefile, profiling, prezentace, utils
+xkocma08 100 doxygen, instalace, testy, matematická knihovna
+xsouce15 100 GUI, icon, mockup, JS
