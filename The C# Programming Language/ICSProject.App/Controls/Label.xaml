@@ -1,0 +1,35 @@
+﻿<UserControl 
+      x:Class="ICSProject.App.Controls.Label"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:v="clr-namespace:ICSProject.App.Views"
+      xmlns:mv="clr-namespace:ICSProject.App.ViewModels"
+      xmlns:c="clr-namespace:ICSProject.App.Controls"
+      x:Name="Self"
+      mc:Ignorable="d" 
+      d:DesignHeight="60" d:DesignWidth="200">
+    
+    <Grid DataContext="{Binding ElementName=Self}">
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="MouseDown">
+                <i:InvokeCommandAction Command="{Binding Cmd}"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        
+        <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelControl}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="{Binding Title}" />
+                <TextBox Grid.Column="1" Text="{Binding Txt}"/>
+            </Grid>
+        </Border>
+    </Grid>
+
+</UserControl>
+

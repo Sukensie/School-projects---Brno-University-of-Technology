@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="ICSProject.App.Controls.ButtonIcon"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      x:Name="Self"
+      mc:Ignorable="d" 
+      d:DesignHeight="50" d:DesignWidth="100">
+    
+    <Grid DataContext="{Binding ElementName=Self}">
+        
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="MouseDown">
+                <i:InvokeCommandAction Command="{Binding Cmd}"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+
+        <Border Grid.Row="0" Grid.Column="0" Style="{Binding ButtonStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Image Grid.Column="0" Source="{Binding Src}"/>
+                <TextBlock Grid.Column="1" Text="{Binding Txt}"/>
+            </Grid>
+        </Border>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<Application x:Class="ICSProject.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:ICSProject.App.Converters"
+             xmlns:controls="clr-namespace:ICSProject.App.Controls"
+             xmlns:services="clr-namespace:ICSProject.App.Services">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Brushes.xaml"/>
+                <ResourceDictionary Source="/Styles/ButtonControl.xaml"/>
+                <ResourceDictionary Source="/Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="/Styles/Defaults.xaml"/>
+                <ResourceDictionary Source="/Styles/GoBackControl.xaml"/>
+                <ResourceDictionary Source="/Styles/HeadingsControl.xaml"/>
+                <ResourceDictionary Source="/Styles/InfoLabelControl.xaml"/>
+                <ResourceDictionary Source="/Styles/LabelControl.xaml"/>
+                <ResourceDictionary Source="/Styles/PrizeTagControl.xaml"/>
+                <ResourceDictionary Source="/Styles/ProfileRideList.xaml"/>
+                <ResourceDictionary Source="/Styles/RideSearchList.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
+
+            <!--<viewModels:ViewModelLocator x:Key="ViewModelLocator" />-->
+
+            <controls:ButtonIcon x:Key="ButtonIcon"/>
+            <controls:Heading x:Key="Heading" />
+            <controls:SubHeading x:Key="SubHeading" />
+            <controls:Label x:Key="Label" />
+            <controls:GoBack x:Key="GoBack"/>
+            <controls:PrizeTag x:Key="PrizeTag"/>
+            <controls:Input x:Key="Input"/>
+            <controls:InfoLabel x:Key="InfoLabel"/>
+
+            <!--<services:MessageDialog x:Key="MessageDialog"/>-->
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

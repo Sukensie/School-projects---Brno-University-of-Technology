@@ -1,0 +1,15 @@
+D:\Repos\ICS\ICSProject.Common.Tests\bin\Release\net6.0\ICSProject.Common.Tests.deps.json
+D:\Repos\ICS\ICSProject.Common.Tests\bin\Release\net6.0\ICSProject.Common.Tests.dll
+D:\Repos\ICS\ICSProject.Common.Tests\bin\Release\net6.0\ref\ICSProject.Common.Tests.dll
+D:\Repos\ICS\ICSProject.Common.Tests\bin\Release\net6.0\ICSProject.Common.Tests.pdb
+D:\Repos\ICS\ICSProject.Common.Tests\bin\Release\net6.0\ICSProject.DAL.dll
+D:\Repos\ICS\ICSProject.Common.Tests\bin\Release\net6.0\ICSProject.DAL.pdb
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.csproj.AssemblyReference.cache
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.AssemblyInfoInputs.cache
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.AssemblyInfo.cs
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.csproj.CoreCompileInputs.cache
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.csproj.CopyComplete
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.dll
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ref\ICSProject.Common.Tests.dll
+D:\Repos\ICS\ICSProject.Common.Tests\obj\Release\net6.0\ICSProject.Common.Tests.pdb

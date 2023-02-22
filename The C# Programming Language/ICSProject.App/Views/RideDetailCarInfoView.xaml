@@ -1,0 +1,40 @@
+﻿<v:UserControlBase x:Class="ICSProject.App.Views.RideDetailCarInfoView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:v="clr-namespace:ICSProject.App.Views"
+      xmlns:m="clr-namespace:ICSProject.App.ViewModels"
+      xmlns:c="clr-namespace:ICSProject.App.Controls"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DataContext="{d:DesignInstance Type=m:RideDetailViewModel}"
+      d:DesignHeight="800" d:DesignWidth="300">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="202"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+
+        </Grid.RowDefinitions>
+
+        <c:SubHeading Grid.Row="0" Txt="Auto:" HorizontalAlignment="Left" Margin="10,0,0,20" Width="47"></c:SubHeading>
+        <Image Grid.Row="1" Margin="15,15,15,15" Source="{Binding Ride.CarImageUrl}"></Image>
+        <c:SubHeading Grid.Row="2" Txt="Informace o voze" HorizontalAlignment="Left" Margin="10,0,0,20"></c:SubHeading>
+        <c:InfoLabel Grid.Row="3" Txt="{Binding Ride.CarManufacturer}"  HorizontalAlignment="Left" Margin="15,0,0,0"></c:InfoLabel>
+        <c:InfoLabel Grid.Row="3" Txt="{Binding Ride.CarType}"/>
+        <c:InfoLabel Grid.Row="4" Txt="Počet sedadel :" Width="115" HorizontalAlignment="Left"></c:InfoLabel>
+        <c:InfoLabel Grid.Row="4" Txt="{Binding Ride.CarNumberOfSeats}" Margin="115,0,0,0" HorizontalAlignment="Left" Width="35"/>
+
+    </Grid>
+
+
+
+</v:UserControlBase>

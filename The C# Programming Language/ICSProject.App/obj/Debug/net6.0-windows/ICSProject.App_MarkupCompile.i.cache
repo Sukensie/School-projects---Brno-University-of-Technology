@@ -1,0 +1,20 @@
+﻿ICSProject.App
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\Repos\ICS\ICSProject.App\obj\Debug\net6.0-windows\
+ICSProject.App
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+D:\Repos\ICS\ICSProject.App\App.xaml
+47-1785163120
+12993124975
+107356030348
+2561080508215
+Controls\ButtonIcon.xaml;Controls\DestinationText.xaml;Controls\GoBack.xaml;Controls\Heading.xaml;Controls\InfoLabel.xaml;Controls\Input.xaml;Controls\Label.xaml;Controls\MenuItem.xaml;Controls\PrizeTag.xaml;Controls\SubHeading.xaml;Controls\SubSubHeading.xaml;Services\MessageDialog.xaml;Styles\Brushes.xaml;Styles\ButtonControl.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Defaults.xaml;Styles\GoBackControl.xaml;Styles\HeadingsControl.xaml;Styles\InfoLabelControl.xaml;Styles\LabelControl.xaml;Styles\PrizeTagControl.xaml;Styles\ProfileRideList.xaml;Styles\RideSearchList.xaml;Views\CarEditView.xaml;Views\CarsListView.xaml;Views\CreateCarView.xaml;Views\CreateRideView.xaml;Views\CreateUserView.xaml;Views\GarageView.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\MenuView.xaml;Views\ProfileEditView.xaml;Views\ProfileGarageEditView - unused.xaml;Views\ProfileRideDetailView.xaml;Views\ProfileRideListView.xaml;Views\ProfileView.xaml;Views\RideDetailCarInfoView.xaml;Views\RideDetailDestinationsView.xaml;Views\RideDetailPassengerView.xaml;Views\RideDetailView.xaml;Views\RideSearchListView.xaml;Views\RideSearchView.xaml;Views\RideView.xaml;Views\UpdateRideView.xaml;Views\UsersListView.xaml;
+
+False
+

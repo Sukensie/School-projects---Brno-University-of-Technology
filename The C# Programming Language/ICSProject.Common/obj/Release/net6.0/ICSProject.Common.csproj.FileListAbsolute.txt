@@ -1,0 +1,11 @@
+D:\Repos\ICS\ICSProject.Common\bin\Release\net6.0\ICSProject.Common.deps.json
+D:\Repos\ICS\ICSProject.Common\bin\Release\net6.0\ICSProject.Common.dll
+D:\Repos\ICS\ICSProject.Common\bin\Release\net6.0\ref\ICSProject.Common.dll
+D:\Repos\ICS\ICSProject.Common\bin\Release\net6.0\ICSProject.Common.pdb
+D:\Repos\ICS\ICSProject.Common\obj\Release\net6.0\ICSProject.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\ICS\ICSProject.Common\obj\Release\net6.0\ICSProject.Common.AssemblyInfoInputs.cache
+D:\Repos\ICS\ICSProject.Common\obj\Release\net6.0\ICSProject.Common.AssemblyInfo.cs
+D:\Repos\ICS\ICSProject.Common\obj\Release\net6.0\ICSProject.Common.csproj.CoreCompileInputs.cache
+D:\Repos\ICS\ICSProject.Common\obj\Release\net6.0\ICSProject.Common.dll
+D:\Repos\ICS\ICSProject.Common\obj\Release\net6.0\ref\ICSProject.Common.dll
+D:\Repos\ICS\ICSProject.Common\obj\Release\net6.0\ICSProject.Common.pdb

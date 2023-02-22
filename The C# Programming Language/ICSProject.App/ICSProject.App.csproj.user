@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\RideDetailView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\DestinationText.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\ButtonIcon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Heading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Label.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\SubHeading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Brushes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ButtonControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\HeadingsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\LabelControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UpdateRideView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CreateUserView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RideDetailPassengerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RideDetailCarInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RideDetailDestinationsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RideDetailView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ProfileEditView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ProfileView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UsersListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

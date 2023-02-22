@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ICSProject.Common/1.0.0": {
+        "runtime": {
+          "ICSProject.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ICSProject.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

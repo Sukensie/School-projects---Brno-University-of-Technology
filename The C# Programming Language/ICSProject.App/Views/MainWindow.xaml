@@ -1,0 +1,100 @@
+﻿<Window
+    x:Class="ICSProject.App.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:v="clr-namespace:ICSProject.App.Views"
+    xmlns:vm="clr-namespace:ICSProject.App.ViewModels"
+    Title="MainWindow"
+    Width="1400"
+    Height="800"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance vm:MainViewModel}">
+
+    <ContentControl Content="{Binding CurrentViewModel}" >
+        <ContentControl.Resources>
+            
+            <DataTemplate DataType="{x:Type vm:RideViewModel}">
+                <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="auto" MinWidth="800"/>
+                    </Grid.ColumnDefinitions>
+                    <v:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>
+                    <v:RideView Grid.Column="1" x:Name="RideView" DataContext="{Binding RideSearchListViewModel}"/>
+                </Grid>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type vm:CreateUserViewModel}">
+                <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="auto" MinWidth="800"/>
+                    </Grid.ColumnDefinitions>
+                    <v:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>
+                    <v:CreateUserView Grid.Column="1"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:CreateRideViewModel}">
+                <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="auto" MinWidth="800"/>
+                    </Grid.ColumnDefinitions>
+                    <v:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>
+                    <v:CreateRideView Grid.Column="1"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:GarageViewModel}">
+                <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="auto" MinWidth="800"/>
+                    </Grid.ColumnDefinitions>
+                    <v:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>
+                    <v:GarageView Grid.Column="1"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:ProfileViewModel}">
+                <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="auto" MinWidth="800"/>
+                    </Grid.ColumnDefinitions>
+                        <v:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>
+                    <v:ProfileView Grid.Column="1"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:RideDetailViewModel}">
+                <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="auto" MinWidth="800"/>
+                    </Grid.ColumnDefinitions>
+                    <v:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>
+                    <v:RideDetailView Grid.Column="1"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:UpdateRideViewModel}">
+                <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" MinWidth="300" MaxWidth="400"/>
+                        <ColumnDefinition Width="auto" MinWidth="800"/>
+                    </Grid.ColumnDefinitions>
+                    <v:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>
+                    <v:UpdateRideView Grid.Column="1"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:LoginViewModel}">
+                <v:LoginWindow/>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+</Window>

@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:ICSProject.App.Controls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml"/>
+        <ResourceDictionary Source="Brushes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="LabelControl" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="20 0 20 10"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BlackDarkBrush}"/>
+
+        <Style.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Padding" Value="5 5 10 5"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Foreground" Value="{StaticResource BlueDarkBrush}"/>
+                <Setter Property="FontStyle" Value="Italic"/>
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="MinWidth" Value="40"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Padding" Value="0 5"/>
+                <Setter Property="TextWrapping"  Value="Wrap"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Foreground" Value="{StaticResource BlackDarkBrush}"/>
+                <Setter Property="SelectionBrush" Value="{StaticResource BlueLightBrush}"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <!--<Style x:Key="LabelControlBase" TargetType="{x:Type c:Label}">
+        <Setter Property="Margin" Value="0"/>
+        <Style.Resources>
+            <Style TargetType="{x:Type Border}" BasedOn="{StaticResource LabelControl}">
+                <Setter Property="Margin" Value="5 0"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+        </Style.Resources>
+    </Style>-->
+
+</ResourceDictionary>

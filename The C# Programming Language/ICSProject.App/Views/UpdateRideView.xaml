@@ -1,0 +1,189 @@
+﻿<v:UserControlBase x:Class="ICSProject.App.Views.UpdateRideView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:v="clr-namespace:ICSProject.App.Views"
+        xmlns:vm="clr-namespace:ICSProject.App.ViewModels"
+        xmlns:c="clr-namespace:ICSProject.App.Controls"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+      d:DataContext="{d:DesignInstance vm:UpdateRideViewModel}"
+      d:DesignHeight="750" d:DesignWidth="1000">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" MinHeight="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--CREATE USER-->
+        <c:Heading Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Txt="UPRAVIT SPOLUJÍZDU"/>
+
+        <c:Label Grid.Row="2" Grid.Column="0" Content="Začátek" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Border Grid.Row="2" Grid.Column="0" Style="{DynamicResource SearchInput}" VerticalAlignment="Bottom">
+            <TextBox Text="{Binding RideStart, UpdateSourceTrigger=PropertyChanged}"/>
+        </Border>
+        <xctk:DateTimePicker Grid.Row="2" Grid.Column="1"
+                                 Value="{Binding RideStartTime, UpdateSourceTrigger=PropertyChanged}"
+                                 FormatString="MM/dd/yyyy HH:mm" Format="Custom" Height="30" VerticalAlignment="Bottom"/>
+
+        <c:Label Grid.Row="3" Grid.Column="0" Content="Konec" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0 5 0 0"/>
+        <Border Grid.Row="3" Grid.Column="0" Style="{DynamicResource SearchInput}" VerticalAlignment="Bottom">
+            <TextBox Text="{Binding RideEnd, UpdateSourceTrigger=PropertyChanged}"/>
+        </Border>
+        <xctk:DateTimePicker Grid.Row="3" Grid.Column="1"
+                                 Value="{Binding RideEndTime, UpdateSourceTrigger=PropertyChanged}"
+                                 FormatString="MM/dd/yyyy HH:mm" Format="Custom" Height="30" VerticalAlignment="Bottom"/>
+
+        <c:Label Grid.Row="4" Grid.Column="0" Content="Cena" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <Border Grid.Row="4" Grid.Column="1" Style="{DynamicResource SearchInput}">
+            <TextBox Text="{Binding RidePrice, UpdateSourceTrigger=PropertyChanged}"/>
+        </Border>
+
+        <c:Label Grid.Row="5" Grid.Column="0" Content="Auto" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <ComboBox ItemsSource="{Binding Cars}" Grid.Row="5" Grid.Column="1" SelectedValuePath="Id" SelectedValue="{Binding SelectedCarId, UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding Manufacturer}" />
+                        <Run Text="{Binding Type}" />    
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        
+
+        <Border Grid.Row="6" Grid.Column="1" x:Name="Border1" Visibility="{Binding Visibility}"    BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0.85">
+            <Grid>
+                <Label Content="Uživatel přidán //TODO aby se to mizelo"/>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Column="2" Grid.Row="1" RowSpan="6" ColumnSpan="3" x:Name="SemiStopAdd">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" MinWidth="450"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <c:Heading  Grid.Column="0" Txt="Přidat Mezizastávku"/>
+                    <Button Click="CollapseSemi" Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 0 25 0">X
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="7"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                    <Grid Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <c:Label Grid.Row="0" Grid.Column="0" Content="Město" Width="100" Margin="20 0 0 0"/>
+                        <Border Grid.Row="0" Grid.Column="1" Style="{DynamicResource SearchInput}" Width="300">
+                            <TextBox Text="{Binding SemistopCity , UpdateSourceTrigger=PropertyChanged}"/>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <c:Label Grid.Row="0" Grid.Column="0" Content="Pořadí" Width="100" Margin="20 0 0 0"/>
+                        <Border Grid.Row="7" Grid.Column="1" Style="{DynamicResource SearchInput}" Width="300">
+                            <TextBox Text="{Binding SemistopOrder, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <c:Label Grid.Row="0" Grid.Column="0" Content="Čas příjezdu" Width="100" Margin="20 0 0 0"/>
+
+                        <xctk:DateTimePicker Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                                     Value="{Binding SemistopArrivalTime, UpdateSourceTrigger=PropertyChanged}"
+                                     FormatString="MM/dd/yyyy HH:mm" Format="Custom" Width="300"/>
+                    </Grid>
+
+                    <Border Grid.Row="4" Grid.Column="0" Style="{DynamicResource ButtonIconControlEdit}" VerticalAlignment="Top" Margin=" 25">
+                        <c:ButtonIcon Src="/Resources/Images/Add.png" Txt="Přidat"  Cmd="{Binding CreateSemiStopCommand}" MouseLeftButtonUp="DisappearSemiStopAdd"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="7" RowSpan="2" ColumnSpan="2">
+            <ListView ItemsSource="{Binding SemiStops}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Panel.ZIndex="1" Margin="10" BorderThickness="1" Background="CornflowerBlue" BorderBrush="Gray" CornerRadius="7.5" HorizontalAlignment="Stretch" MinWidth="300" Height="50">
+                                <Grid Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Background="Transparent" BorderThickness="0" Grid.Column="0" Text="{Binding City}" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center"></TextBox>
+                                    <TextBox Background="Transparent" BorderThickness="0" Grid.Column="1" Text="{Binding ArrivalTime}" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center"></TextBox>
+                                    <TextBox Background="Transparent" BorderThickness="0" Grid.Column="2" Text="{Binding Order}" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center"></TextBox>
+                                    <Button Grid.Column="3" Click="Delete_Semi"  Width="30" Height="30">X
+                                        <Button.Resources>
+                                            <Style TargetType="{x:Type Border}">
+                                                <Setter Property="CornerRadius" Value="7"/>
+                                            </Style>
+                                        </Button.Resources>
+                                    </Button>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <Border Grid.Row="5" Grid.Column="0" Grid.RowSpan="2"  Margin="0 30 0 0" Style="{DynamicResource ButtonIconControlEdit}">
+            <c:ButtonIcon Src="/Resources/Images/Add.png" Txt="Přidat mezizastávku"
+                          MouseLeftButtonUp="AppearSemiStopAdd"/>
+        </Border>
+
+        <Border Grid.Row="8" Grid.Column="4" Grid.RowSpan="2" Style="{DynamicResource ButtonIconControlEdit}">
+            <c:ButtonIcon Src="/Resources/Images/Edit.png"
+                          Txt="Upravit spolujízdu"
+                          Cmd="{Binding CreateRideCommand}"/>
+        </Border>
+    </Grid>
+
+</v:UserControlBase>

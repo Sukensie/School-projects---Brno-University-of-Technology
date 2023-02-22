@@ -1,0 +1,101 @@
+﻿<v:UserControlBase x:Class="ICSProject.App.Views.LoginWindow"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:v="clr-namespace:ICSProject.App.Views"
+                   xmlns:vm="clr-namespace:ICSProject.App.ViewModels"
+                   xmlns:c="clr-namespace:ICSProject.App.Controls"
+                   mc:Ignorable="d"
+                   d:DataContext="{d:DesignInstance vm:LoginViewModel}"
+                   Height="750" Width="1000">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" MinHeight="80"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*" MinHeight="80"/>
+            <RowDefinition Height="1*" MinHeight="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource LoginBox}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" MaxHeight="80" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="1*" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Search bar-->
+                <Border Style="{StaticResource LoginBoxSearchBar}">
+                    <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="300">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Style="{StaticResource NoHover}" Command="{Binding Path=UsersListViewModel.UserSearchedCommand}" Background="white" BorderBrush="White" Grid.Column="1">
+                            <Image Grid.Column="1" Margin="10" Source="/Resources/Images/Find.png"/>
+                        </Button>
+
+                        <Border Grid.Row="0" Grid.Column="0" Style="{DynamicResource SearchInput}">
+                            <TextBox Grid.Column="0" Text="{Binding Path=UsersListViewModel.UserSelect, UpdateSourceTrigger=PropertyChanged}">
+                                <TextBox.Style>
+                                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                        <Setter Property="BorderBrush" Value="{StaticResource BlackDarkBrush}"/>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+                                        <Setter Property="Padding" Value="7.5"/>
+                                        <Style.Resources>
+                                            <VisualBrush x:Key="SearchInput" AlignmentX="Left" AlignmentY="Center" Stretch="Uniform">
+                                                <VisualBrush.Visual>
+                                                    <Label Content="Hledat uživatele" Foreground="Gray" ClipToBounds="True" />
+                                                </VisualBrush.Visual>
+                                            </VisualBrush>
+                                        </Style.Resources>
+                                        <Style.Triggers>
+                                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                                <Setter Property="Background" Value="{StaticResource SearchInput}" />
+                                            </Trigger>
+                                            <Trigger Property="Text" Value="{x:Null}">
+                                                <Setter Property="Background" Value="{StaticResource SearchInput}" />
+                                            </Trigger>
+                                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                                <Setter Property="Background" Value="White" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                        </Border>
+                        
+                    </Grid>
+                </Border>
+
+                <v:UsersListView Grid.Row="1" DataContext="{Binding UsersListViewModel}"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Command="{Binding Path=UsersListViewModel.UserLogInCommand}" Grid.Column="0" Grid.Row="0" Content="Přihlásit se" Style="{DynamicResource Login}"/>
+                    <Button Command="{Binding Path=UsersListViewModel.UserDeletedCommand}" Grid.Column="1" Grid.Row="0" Content="Smazat uživatele" Style="{DynamicResource Login}"/>
+                </Grid>
+
+                
+                <!--<c:ButtonIcon Grid.Row="2" Txt="Přihlásit" Cmd="{Binding LogInCommand}"></c:ButtonIcon>-->
+            </Grid>
+
+        </Border>
+        
+    </Grid>
+</v:UserControlBase>

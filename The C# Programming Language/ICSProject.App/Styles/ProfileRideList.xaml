@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:ICSProject.App.Controls"
+                    xmlns:v="clr-namespace:ICSProject.App.Views">
+
+    <Style x:Key="ProfileRideListView" TargetType="{x:Type Grid}">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>
+
+    <Style x:Key="ProfileRideListItem" TargetType="{x:Type Grid}">
+        <Setter Property="Margin" Value="10"/>
+
+        <Style.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Padding" Value="5 5 10 5"/>
+                <Setter Property="Height" Value="30"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style x:Key="ProfileRideDetailView" TargetType="{x:Type Grid}">
+        <Setter Property="Width" Value="500"/>
+        <Setter Property="Margin" Value="20 5"/>
+    </Style>
+
+    <Style x:Key="ProfileRideListItemBorder" TargetType="{x:Type Border}">
+        <Setter Property="Padding" Value="7.5 2.5"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="{StaticResource BlueLightBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GrayDarkBrush}"/>
+        <Setter Property="CornerRadius" Value="12.5"/>
+    </Style>
+
+    <Style x:Key="ProfileRideListItemHeading" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="5 15 10 0"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
+    <Style x:Key="ProfileRideListItemDate" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Padding" Value="20 10 0 0"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="FontWeight" Value="ExtraLight"/>
+        <Setter Property="FontSize" Value="10"/>
+    </Style>
+
+    <Style x:Key="CarsList" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="{StaticResource GrayDarkBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="0 10"/>
+        <Setter Property="CornerRadius" Value="7.5 0 0 7.5"/>
+        <Setter Property="Background" Value="{StaticResource BlueLightBrush}"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="60"/>
+    </Style>
+
+    <Style x:Key="SemiStopsList" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="{StaticResource GrayDarkBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="0 10"/>
+        <Setter Property="CornerRadius" Value="7.5 0 0 7.5"/>
+        <Setter Property="Background" Value="{StaticResource BlueLightBrush}"/>
+        <Setter Property="Width" Value="350"/>
+        <Setter Property="Height" Value="40"/>
+        <Style.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Padding" Value="10 5"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+</ResourceDictionary>

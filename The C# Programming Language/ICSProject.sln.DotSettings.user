@@ -1,0 +1,40 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=044130b3_002D068b_002D4a05_002D9cd5_002D7688bce36b74/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteCar_RideNotDeleted" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.DeleteCar_RideNotDeleted&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5176647a_002Ddd9d_002D46e9_002D871c_002D57c2a39d4c4b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddNew_User_Persisted #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextUserTests.AddNew_User_Persisted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextUserTests.GetAll_Users_ContainsSeededUser&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextUserTests.Update_User_Persisted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextUserTests.Delete_User_User1Deleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextUserTests.DeleteById_User_User1Deleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextCarTests.GetAll_Cars_ForOwner&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextCarTests.Delete_Car_Deleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextCarTests.Update_Car_Persisted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextCarTests.DeleteById_Car_Deleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.Delete_RideWithoutPassengers&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.AddNew_Ride_Persisted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.DeleteCarRideDeleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.DeleteCar_RideNotDeleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.DeleteCar_RideDeleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.DeleteDriver_RideDeleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2FE2DFB5-BB57-45C6-8DA6-26C445627F24::net6.0::ICSProject.BL.Tests.RideFacadeTests.Create_WithWithoutSemiStop_DoesNotThrow&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c626749c_002D2f50_002D4417_002Dbeb2_002Dfafc43409fe4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AddNew_User_Persisted" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextUserTests.AddNew_User_Persisted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2FE2DFB5-BB57-45C6-8DA6-26C445627F24::net6.0::ICSProject.BL.Tests.RideFacadeTests.GetAll_FromSeeded_DoesNotThrowAndContainsSeeded&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextCarTests.Delete_Car_Deleted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextCarTests.Update_Car_Persisted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E08788F1-BF53-43A4-B5F3-1FC705660211::net6.0::ICSProject.DAL.Tests.DbContextRideTests.GetAll_Rides_ForDriver&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:Boolean x:Key="/Default/RunConfigs/Config/=E9CFE0BE9B0F0541B118A9CBC875A2D2/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/RunConfigs/Config/=E9CFE0BE9B0F0541B118A9CBC875A2D2/Name/@EntryValue">ICSProject.App</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=E9CFE0BE9B0F0541B118A9CBC875A2D2/ProjectGuid/@EntryValue">CD0C410A1C043A41AA1C7C1925C2672C</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=E9CFE0BE9B0F0541B118A9CBC875A2D2/Type/@EntryValue">project</s:String></wpf:ResourceDictionary>

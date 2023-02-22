@@ -1,0 +1,14 @@
+D:\Repos\ICS\ICSProject.DAL\bin\Release\net6.0\ICSProject.DAL.deps.json
+D:\Repos\ICS\ICSProject.DAL\bin\Release\net6.0\ICSProject.DAL.runtimeconfig.json
+D:\Repos\ICS\ICSProject.DAL\bin\Release\net6.0\ICSProject.DAL.dll
+D:\Repos\ICS\ICSProject.DAL\bin\Release\net6.0\ref\ICSProject.DAL.dll
+D:\Repos\ICS\ICSProject.DAL\bin\Release\net6.0\ICSProject.DAL.pdb
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.csproj.AssemblyReference.cache
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.AssemblyInfoInputs.cache
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.AssemblyInfo.cs
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.csproj.CoreCompileInputs.cache
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.dll
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ref\ICSProject.DAL.dll
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.pdb
+D:\Repos\ICS\ICSProject.DAL\obj\Release\net6.0\ICSProject.DAL.genruntimeconfig.cache

@@ -1,0 +1,17 @@
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ICSProject.BL.deps.json
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ICSProject.BL.dll
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ref\ICSProject.BL.dll
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ICSProject.BL.pdb
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ICSProject.Common.dll
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ICSProject.DAL.dll
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ICSProject.Common.pdb
+D:\Repos\ICS\ICSProject.BL\bin\Release\net6.0\ICSProject.DAL.pdb
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.csproj.AssemblyReference.cache
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.AssemblyInfoInputs.cache
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.AssemblyInfo.cs
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.csproj.CoreCompileInputs.cache
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.csproj.CopyComplete
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.dll
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ref\ICSProject.BL.dll
+D:\Repos\ICS\ICSProject.BL\obj\Release\net6.0\ICSProject.BL.pdb

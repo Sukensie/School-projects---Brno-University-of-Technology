@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:ICSProject.App.Controls">
+
+    <Style x:Key="PrizeTagControl" TargetType="{x:Type Border}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <!--<Setter Property="HorizontalAlignment" Value="Center"/>-->
+        <Setter Property="MaxHeight" Value="30"/>
+        <Setter Property="Margin" Value="2.5"/>
+        <Setter Property="Padding" Value="7.5 2.5"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="{StaticResource YellowLightBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource YellowDarkBrush}"/>
+        <Setter Property="CornerRadius" Value="2.5"/>
+
+        <Style.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="0 5"/>
+                <Setter Property="Foreground" Value="{StaticResource BlackDarkBrush}"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <!--TODO-->
+    <Style x:Key="PrizeTagControlBlue" TargetType="{x:Type c:PrizeTag}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Background" Value="{StaticResource BlueLightBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BlueDarkBrush}"/>
+    </Style>
+</ResourceDictionary>

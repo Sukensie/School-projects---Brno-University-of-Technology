@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "ICSProject.DAL": {
+      "commandName": "Project"
+    }
+  }
+}

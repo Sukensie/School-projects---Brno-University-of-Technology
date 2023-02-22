@@ -1,0 +1,177 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:ICSProject.App.Controls"
+                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
+    
+    <!--LOGIN WINDOW-->
+    <Style x:Key="LoginBox" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{StaticResource BlackDarkBrush}"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="Padding" Value="30"/>
+    
+        <Style.Resources>
+            <Style TargetType="{x:Type ListView}">
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Padding" Value="0 10"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style x:Key="LoginBoxSearchBar" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{StaticResource BlackDarkBrush}"/>
+
+        <Style.Resources>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="Margin" Value="15 0"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="BorderBrush" Value="{StaticResource BlackDarkBrush}"/>
+                <Setter Property="BorderThickness" Value="0 0 0 1"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style x:Key="LoginBoxList">
+        <Style.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+            <Style TargetType="{x:Type Image}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="2.5"/>
+                <Setter Property="Height" Value="60"/>
+                <Setter Property="Width" Value="60"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontWeight" Value="DemiBold"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style x:Key="LoginItem" TargetType="Border">
+        <Setter Property="Margin" Value="5 5 0 5"/> 
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource GrayDarkBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource BlueLightBrush}"/>
+        <Setter Property="CornerRadius" Value="12.5"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+
+    <Style x:Key="LoginItemText" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="Foreground" Value="{StaticResource BlackLightBrush}"/>
+    </Style>
+
+    <Style x:Key="LoginButton" TargetType="{x:Type Border}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="Background" Value="{StaticResource BlueLightBrush}" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Padding" Value="5"/>
+    </Style>
+
+    <Style x:Key="ComboBoxItemStyle" TargetType="{x:Type ComboBoxItem}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+
+
+    <!--MENU-->
+    <Style x:Key="CenteredText" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="5"/>
+    </Style>
+
+    <Style x:Key="MenuBox" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{StaticResource BlueLightBrush}"/>
+        <Setter Property="Margin" Value="0 0 10 0"/>
+        <Setter Property="BorderThickness" Value="0 0 1 0"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BlueDarkBrush}"/>
+        <Setter Property="Width" Value="290" />
+    </Style>
+
+    <Style x:Key="Menu" TargetType="{x:Type ListBox}">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="2 10"/>
+    </Style>
+
+    <Style x:Key="MenuItemControl" TargetType="{x:Type Border}">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GrayDarkBrush}"/>
+        <Setter Property="CornerRadius" Value="7.5"/>
+        <Setter Property="Background" Value="{StaticResource BlackLightBrush}"/>
+        <Setter Property="Padding" Value="2 10"/>
+
+        <Style.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="0 5"/>
+                <Setter Property="Foreground" Value="{StaticResource BlackDarkBrush}"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+
+    <!--SEPARATORS-->
+    <Style x:Key="VerticalSeparator" TargetType="{x:Type Border}">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="BorderThickness" Value="1 0 0 0"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GrayDarkBrush}"/>
+    </Style>
+
+    <Style x:Key="HorizontalSeparator" TargetType="{x:Type Border}">
+        <Setter Property="Margin" Value="20 10"/>
+        <Setter Property="BorderThickness" Value="0 1 0 0"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BlackDarkBrush}"/>
+    </Style>
+
+    <Style x:Key="GridSplitter" TargetType="{x:Type GridSplitter}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="15 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type GridSplitter}">
+                    <Border BorderThickness="1,1,1,1">
+                        <Border.BorderBrush>
+                            <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <GeometryDrawing Brush="{StaticResource GrayDarkBrush}">
+                                            <GeometryDrawing.Geometry>
+                                                <GeometryGroup>
+                                                    <RectangleGeometry Rect="0,0,50,50" />
+                                                    <RectangleGeometry Rect="50,50,50,50" />
+                                                </GeometryGroup>
+                                            </GeometryDrawing.Geometry>
+                                        </GeometryDrawing>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Border.BorderBrush>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
